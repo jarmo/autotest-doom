@@ -1,7 +1,9 @@
+require "test_notifier"
+
 TestNotifier::TITLES.merge! :fail => "FAIL",
                             :success => "Pass"
 
-TestNotifier::IMAGES[:success] = File.dirname(__FILE__) + "/../../images/doom/pass.png"
+TestNotifier::IMAGES[:success] = File.dirname(__FILE__) + "/../../images/pass.png"
 
 doom_hook = proc do |at|
   content = at.results.to_s
@@ -9,7 +11,7 @@ doom_hook = proc do |at|
   failures = rspec_matches[0].to_i
   if failures > 0
     count = [(9 + failures) / 10 * 10, 50].min
-    TestNotifier::IMAGES[:fail] = File.dirname(__FILE__) + "/../../images/doom/fail#{count}.png"
+    TestNotifier::IMAGES[:fail] = File.dirname(__FILE__) + "/../../images/fail#{count}.png"
   end
   false
 end

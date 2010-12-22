@@ -10,9 +10,10 @@ begin
     gem.email = "jarmo.p@gmail.com"
     gem.homepage = "http://github.com/jarmo/autotest-doom"
     gem.authors = ["Jarmo Pertman"]
+    gem.add_dependency "test_notifier", "~> 0"
+   
     gem.add_development_dependency "rspec", "~> 2.3"
     gem.add_development_dependency "yard", ">= 0"
-    # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
   Jeweler::GemcutterTasks.new
 rescue LoadError
