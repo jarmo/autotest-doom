@@ -1,4 +1,4 @@
-require "test_notifier"
+require 'test_notifier/runner/autotest'
 
 TestNotifier::TITLES.merge! :fail => "FAIL",
                             :success => "Pass"

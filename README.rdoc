@@ -1,6 +1,28 @@
-= autotest-doom
+= Autotest-Doom
 
-Description goes here.
+Autotest-Doom is a plugin for Autotest to show bloody Doom's grunt when tests are failing.
+
+If someone knows when the situation is real bad then it's the Doom's grunt and not you. For sure.
+Let his experience guide you to worry-free life! Make him smile for return!
+
+Autotest-Doom uses Test Notifier gem to show grunt's opinion about the situation on OS X, Linux and Windows.
+
+== Installation
+
+1. Refer to the Test Notifier installation instructions at https://github.com/fnando/test_notifier
+   to install all necessary components needed for your OS.
+2. Execute `gem install autotest-doom`.
+3. Add `require "autotest/doom"` to _.autotest_ file under your project.
+4. Execute `autotest` in your project directory.
+5. Start specing with RSpec.
+
+Don't forget to keep grunt happy!
+
+== Requirements
+
+* Ruby
+* Autotest gem
+* RSpec
 
 == Note on Patches/Pull Requests
  
@@ -14,4 +36,4 @@ Description goes here.
 
 == Copyright
 
-Copyright (c) 2010 Jarmo Pertman. See LICENSE for details.
+Copyright (c) 2010-2011 Jarmo Pertman. See LICENSE for details.

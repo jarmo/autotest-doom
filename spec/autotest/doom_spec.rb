@@ -9,13 +9,13 @@ module Autotest
     let(:autotest) {mock "autotest_results"}
 
     context "hook set-up" do
-      it "sets to the first" do
+      it "sets it to the first hook for autotest" do
         hooks.should have(2).procs
         hooks.last.should == @empty_proc
         hooks.first.should be_a(Proc)
       end
 
-      it "returns false to continue executing autotest callbacks" do
+      it "returns false to continue executing autotest hooks" do
         autotest.stub(:results).and_return("1 example, 0 failures")
         hooks.first[autotest].should be_false
       end
@@ -70,7 +70,7 @@ module Autotest
           autotest.stub(:results).and_return("#{count} examples, #{count} failures")
           hooks.first[autotest]
           TestNotifier::IMAGES[:fail].should match(%r{/images/#{expected_image}})
-            File.should exist(TestNotifier::IMAGES[:fail])
+          File.should exist(TestNotifier::IMAGES[:fail])
         end
       end
     end
@@ -83,5 +83,12 @@ module Autotest
     def hooks
       HOOKS[:ran_command]
     end
+
   end
+
+  def add_hook(hook)
+    # do nothing, for test-notifier
+  end
+
+  module_function :add_hook
 end
