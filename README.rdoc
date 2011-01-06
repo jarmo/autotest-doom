@@ -7,12 +7,14 @@ Let his experience guide you to worry-free life! Make him smile for return!
 
 Autotest-Doom uses Test Notifier gem to show grunt's opinion about the situation on OS X, Linux and Windows.
 
+Read more from my dedicated blog post at http://www.itreallymatters.net/post/2626638691/autotesting-with-doom-guy
+
 == Installation
 
 1. Refer to the Test Notifier installation instructions at https://github.com/fnando/test_notifier
    to install all necessary components needed for your OS.
 2. Execute `gem install autotest-doom`.
-3. Add `require "autotest/doom"` to _.autotest_ file under your project.
+3. Add `require "autotest/doom"` to .autotest file under your project.
 4. Execute `autotest` in your project directory.
 5. Start specing with RSpec.
 
