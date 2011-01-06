@@ -18,7 +18,7 @@ Read more from my dedicated blog post at http://www.itreallymatters.net/post/262
 4. Execute `autotest` in your project directory.
 5. Start specing with RSpec.
 
-Don't forget to keep grunt happy!
+Don't forget to keep the grunt happy!
 
 == Requirements
 
